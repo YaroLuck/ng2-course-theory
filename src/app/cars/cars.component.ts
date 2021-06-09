@@ -10,18 +10,21 @@ export class CarsComponent implements OnInit {
   constructor() {
   }
 
-  addCarStatus = '';
-  inputText = '';
+  // addCarStatus = '';
+  // inputText = 'defaultText';
+  carName = '';
+  addCarStatus = false;
 
   addCar() {
-    this.addCarStatus = 'Машина добавлена!';
+    // this.addCarStatus = 'Машина добавлена!';
+    this.addCarStatus = true;
   }
 
-  onKeyUp(event) {
-    // this.inputText = (event.target as HTMLInputElement).value;
-    // this.inputText = value;
-    this.inputText = event.target.value;
-  }
+  // onKeyUp(event) {
+  //   // this.inputText = (event.target as HTMLInputElement).value;
+  //   // this.inputText = value;
+  //   this.inputText = event.target.value;
+  // }
 
   ngOnInit() {
   }

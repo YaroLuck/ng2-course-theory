@@ -1,10 +1,18 @@
+<input type="text" class="form-control" [(ngModel)]="carName">
 <button  class="btn-check-primary" (click)="addCar()">Добавить машину</button>
-<p>{{addCarStatus}}</p>
+<p *ngIf="!addCarStatus; else successStatus">Машина не добавлена</p>
+<ng-template #successStatus >
+  <p >Машина добавлена</p>
+</ng-template>
+
 <hr>
 <app-car></app-car>
 <app-car></app-car>
 
-<hr>
+<!--<hr>-->
 
-<input type="text" class="form-control" (keyup.enter)="onKeyUp($event)">
-<p>{{ inputText }}</p>
+<!--<input type="text" class="form-control" (keyup.enter)="onKeyUp($event)">-->
+<!--&lt;!&ndash; [] - из компонента в шаблон,  () - из шаблона в компонент &ndash;&gt;-->
+<!--<input type="text" class="form-control" [(ngModel)]="inputText">-->
+
+<!--<p>{{ inputText }}</p>-->
